@@ -1,0 +1,16 @@
+version: '2.1'
+services:
+  bot:
+    build: .
+    volumes:
+      - .:/code
+    depends_on:
+      - redis
+    restart: unless-stopped
+  redis:
+    image: redis:6
+    volumes:
+      - ./storage:/data
+    ports:
+      - "6558:6557"
+    restart: unless-stopped

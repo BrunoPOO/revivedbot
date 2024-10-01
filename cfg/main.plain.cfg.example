@@ -1,0 +1,14 @@
+[bot]
+token=
+name=
+
+[updates]
+mode=polling
+host=
+port=
+url=
+key=
+cert=
+
+[redis]
+host=localhost
